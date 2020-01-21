@@ -118,15 +118,16 @@ function generateLog () {
     if(frames % 100 === 0){
         
         rnd = Math.random() * canvas.height
-        if(Math.random() >= 0.5) image = img.instagram
-        if(Math.random() >= 0) image = img.starbucks
+        let rndOpcional = Math.random()
+        if(rndOpcional >= 0.5) {image = img.instagram}
+        else if(rndOpcional >= 0) {image = img.starbucks}
+        console.log(rndOpcional)
         logos.push(new Logos(canvas.width + 100, rnd, image))
     }
 }
 
 function drawLogos (){
     generateLog()
-    console.log(logos)
     logos.forEach(logos => logos.draw())
 }
 
