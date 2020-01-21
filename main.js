@@ -113,19 +113,20 @@ const kim = new Character (0, canvas.height - 100)
 const background = new Background(0, 0)
 
 function generateLog () {
-    let img, rnd
+    let image, rnd
     
     if(frames % 100 === 0){
         
         rnd = Math.random() * canvas.height
-        if(Math.random()>= 0.5) img = img.instagram
-        if(Math.random ()>= 0,klckododflodfodfdfdw.5) img = img.starbucks
-        logos.push(new Logos(canvas.width + 100, rnd, img))
+        if(Math.random() >= 0.5) image = img.instagram
+        if(Math.random() >= 0) image = img.starbucks
+        logos.push(new Logos(canvas.width + 100, rnd, image))
     }
 }
 
 function drawLogos (){
     generateLog()
+    console.log(logos)
     logos.forEach(logos => logos.draw())
 }
 
